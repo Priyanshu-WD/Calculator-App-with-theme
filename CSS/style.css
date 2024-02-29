@@ -255,10 +255,10 @@ main.active3 button:hover {
 
 .digitsBtn {
   max-width: 28.125rem;
-  display: flex;
-
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 3.75rem;
+  gap: 0.8rem;
   background-color: var(
     --Very-dark-desaturated-blue-toggle-background-keypad-background
   );
@@ -266,32 +266,14 @@ main.active3 button:hover {
   border-radius: 0.75rem;
   padding: 1rem;
 }
-
-button {
-  cursor: pointer;
-  margin: auto;
-  border-radius: 0.75rem;
-  width: 5rem;
-  font-size: 1.8rem;
-  color: var(--Very-dark-grayish-blue);
-  border: none;
-  background-color: var(--Light-grayish-orange-key-background);
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0px 3px var(--Very-dark-grayish-blue);
-  height: 3rem;
-}
-
 .reset {
   background-color: hsl(225, 21%, 49%);
-  width: 11.5rem;
+  grid-column: 1/3;
   color: hsl(0, 0%, 100%);
 }
 
 .equal {
-  width: 11.5rem;
+  grid-column: 3/5;
   background-color: hsl(6, 63%, 50%);
   color: hsl(0, 0%, 100%);
   box-shadow: 0px 3px 2px hsl(6, 70%, 34%);
@@ -302,10 +284,21 @@ button {
   color: hsl(0, 0%, 100%);
 }
 
+button {
+  cursor: pointer;
+  border-radius: 0.75rem;
+  font-size: 1.8rem;
+  color: var(--Very-dark-grayish-blue);
+  border: none;
+  background-color: var(--Light-grayish-orange-key-background);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 3px var(--Very-dark-grayish-blue);
+}
+
 @media only screen and (min-width: 320px) and (max-width: 468px) {
-  main {
-    min-height: 100vh;
-  }
   .calculator-main {
     width: 100%;
     padding: 2rem;
@@ -318,22 +311,10 @@ button {
   .digitsBtn {
     width: 100%;
     gap: 0.8rem;
+    grid-auto-rows: 5.313rem;
   }
 
   button {
-    width: 4rem;
-
-    height: 4rem;
-  }
-
-  .reset {
-    width: 9rem;
-    height: 5rem;
-    color: hsl(0, 0%, 100%);
-  }
-
-  .equal {
-    width: 9rem;
-    height: 5rem;
+    font-size: 1.5rem;
   }
 }
