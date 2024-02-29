@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator App</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon" />
+  </head>
+  <body>
+    <main>
+      <section class="sec1">
+        <div class="calculator-main">
+          <div class="top-content">
+            <div class="clac">
+              <h1 class="hero-top-content" id="content" >Calc</h1>
+            </div>
+            <div class="theme">
+              <div class="theme-text" id="theme" >theme</div>
+
+              <div class="hero-toggle">
+                <span class="themeNumber"
+                  ><p id="one" class="themeCount" >1</p>
+                  <p id="two" class="themeCount" >2</p>
+                  <p id="three" class="themeCount" >3</p></span
+                >
+                <button class="toggle-btn" id="tggleBTn"></button>
+              </div>
+            </div>
+          </div>
+          <input
+            type="text"
+            name="result"
+            id="result"
+            placeholder="0"
+            readonly
+          />
+          <div class="digitsBtn" id="keypadPanel">
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="del" id="del">DEL</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>+</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>-</button>
+            <button>.</button>
+            <button>0</button>
+            <button>/</button>
+            <button>*</button>
+            <button class="reset" id="reset">RESET</button>
+            <button class="equal" id="equal">=</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="JS/script.js"></script>
+</html>
